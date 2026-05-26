@@ -1,0 +1,6 @@
+/build/
+.settings/
+target/
+bin/
+*.class
+src/main/webapp/WEB-INF/lib/*.jar
