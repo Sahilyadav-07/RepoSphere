@@ -39,7 +39,11 @@ public class CreateRepoServlet extends HttpServlet {
 			int result = ps.executeUpdate();
 			
 			if(result > 0) {
-				response.getWriter().println("Repository Created Successfully");
+
+			    response.sendRedirect(
+			        "viewRepos?msg=created"
+			    );
+
 			}else {
 				response.getWriter().println("Failed to Create Repository");
 			}

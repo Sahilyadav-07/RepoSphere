@@ -37,7 +37,11 @@ public class UploadFileServlet extends HttpServlet{
 		
 		filePart.write(uploadPath + File.separator + fileName);
 		
-		response.getWriter().println("File Uploaded successfully");
+		response.sendRedirect(
+			    "openRepo?repoName=" +
+			    repoName +
+			    "&msg=uploaded"
+			);
 		
 	}
 

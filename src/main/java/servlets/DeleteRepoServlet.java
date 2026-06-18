@@ -33,7 +33,7 @@ public class DeleteRepoServlet extends HttpServlet {
 			
 			ps.executeUpdate();
 			
-			response.sendRedirect("viewRepos");
+			response.sendRedirect("viewRepos?msg=deleted");
 			
 		}catch(Exception e) {
 			e.printStackTrace();
