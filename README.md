@@ -140,7 +140,7 @@ CREATE TABLE repositories(
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/RepoSphere.git
+git clone https://github.com/Sahilyadav-07/RepoSphere.git
 ```
 
 ### 2. Import Project
@@ -149,19 +149,15 @@ Import the project into Eclipse IDE.
 
 ### 3. Configure Database
 
-Update database credentials in:
-
-```java
-DBConnection.java
-```
+Configure your MySQL username, password, and database name in DBConnection.java.
 
 ### 4. Add MySQL Connector
 
-Add MySQL Connector JAR to the project libraries.
+Add mysql-connector-j.jar to the project's build path.
 
 ### 5. Run on Tomcat
 
-Deploy the project on Apache Tomcat 9.
+Import the project into Eclipse and run it using Apache Tomcat 9.
 
 ### 6. Open Browser
 
