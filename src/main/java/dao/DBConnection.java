@@ -10,9 +10,9 @@ public class DBConnection {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/minigithub",
+			conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/reposphere",
 					"root",
-					"sahilyadav077"
+					"your-password"
 					);
 					
 		}catch (Exception e) {
