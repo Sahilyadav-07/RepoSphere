@@ -2,61 +2,91 @@
 
 ### A Web-Based Repository Management System
 
-RepoSphere is a web-based repository management platform inspired by basic GitHub functionality. It allows users to create repositories and manage files through upload, download, viewing, and deletion operations using a simple web interface.
+RepoSphere is a web-based repository management platform designed to simplify the organization and management of project files. Inspired by the core concepts of modern repository hosting platforms, RepoSphere allows users to create repositories, upload files, download resources, and manage repository contents through an intuitive and user-friendly interface.
 
----
+The project was developed using Java Servlets, JSP, JDBC, MySQL, and Apache Tomcat, following a structured web application architecture. It demonstrates key concepts of Java web development, including request handling, database integration, file management, and dynamic content rendering.
 
-## 📌 Overview
+RepoSphere provides a centralized environment where users can organize project resources into dedicated repositories, making file management more structured and efficient. The application features a modern Bootstrap-based interface, repository-wise file organization, real-time updates, success notifications, and secure file operations.
 
-RepoSphere provides a centralized platform for organizing project files into repositories. Users can create repositories, upload files, download them when needed, and manage repository contents efficiently.
-
-The project is built using Java Servlets, JSP, MySQL, and Apache Tomcat.
+This project serves as both a practical repository management solution and a demonstration of full-stack Java web development concepts.
 
 ---
 
 ## ✨ Features
 
 ### 📁 Repository Management
-- Create Repository
-- View All Repositories
-- Delete Repository
-- Open Repository
+
+* Create Repository
+* View All Repositories
+* Open Repository
+* Delete Repository
 
 ### 📄 File Management
-- Upload Files
-- View Uploaded Files
-- Download Files
-- Delete Files
 
-### 🔄 Dynamic Operations
-- Repository-wise file organization
-- Real-time file listing
-- Dynamic URL handling
-- User feedback messages
+* Upload Files
+* Download Files
+* Delete Files
+* Repository-wise File Organization
+
+### 🎨 User Interface
+
+* Modern Bootstrap-Based Dashboard
+* Dark Theme UI
+* Repository Cards
+* Success Notifications
+* Delete Confirmation Dialogs
+* Responsive Design
+
+---
+
+## 📸 Screenshots
+
+### Create Repository Page
+
+![Create Repository](screenshots/create_repo.png)
+
+---
+
+### Repository Dashboard
+
+![Repository Dashboard](screenshots/dashboard.png)
+
+---
+
+### Repository Files Page
+
+![Repository Files](screenshots/repository_page.png)
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- JSP
-- HTML
-- CSS
-- JavaScript
+
+* JSP (Java Server Pages)
+* HTML
+* CSS
+* Bootstrap 5
+* JavaScript
 
 ### Backend
-- Java Servlets
-- JDBC
+
+* Java Servlets
+* JDBC
 
 ### Database
-- MySQL
+
+* MySQL
 
 ### Server
-- Apache Tomcat 9
+
+* Apache Tomcat 9
 
 ### Development Tools
-- Eclipse IDE
-- MySQL Workbench
+
+* Eclipse IDE
+* MySQL Workbench
+* Git & GitHub
 
 ---
 
@@ -64,22 +94,22 @@ The project is built using Java Servlets, JSP, MySQL, and Apache Tomcat.
 
 ```text
 User
-  │
-  ▼
+ │
+ ▼
 JSP Pages
-  │
-  ▼
-Servlets
-  │
-  ▼
+ │
+ ▼
+Java Servlets
+ │
+ ▼
 JDBC
-  │
-  ▼
+ │
+ ▼
 MySQL Database
 
 File Storage
-  │
-  ▼
+ │
+ ▼
 Repositories Folder
 ```
 
@@ -103,13 +133,14 @@ RepoSphere/
 │       ├── DownloadFileServlet.java
 │       └── DeleteFileServlet.java
 │
-├── webapp/
+├── WebContent/
 │   ├── createRepo.jsp
 │   ├── viewRepos.jsp
 │   ├── repo.jsp
-│   └── index.jsp
 │
-└── Repositories/
+├── screenshots/
+│
+└── README.md
 ```
 
 ---
@@ -123,51 +154,54 @@ CREATE DATABASE reposphere;
 USE reposphere;
 ```
 
-Create Table:
+Create Repository Table:
 
 ```sql
-CREATE TABLE repositories(
+CREATE TABLE repositories (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    name VARCHAR(100) NOT NULL
 );
 ```
 
 ---
 
-## 🚀 How to Run
+## 🚀 Installation & Setup
 
-### 1. Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/Sahilyadav-07/RepoSphere.git
 ```
 
-### 2. Import Project
+### Import Project
 
 Import the project into Eclipse IDE.
 
-### 3. Configure Database
+### Configure Database
 
-Configure your MySQL username, password, and database name in DBConnection.java.
+Update MySQL credentials in:
 
-### 4. Add MySQL Connector
+```java
+DBConnection.java
+```
 
-Add mysql-connector-j.jar to the project's build path.
+### Add MySQL Connector
 
-### 5. Run on Tomcat
+Add the MySQL JDBC Connector JAR to the project's build path.
 
-Import the project into Eclipse and run it using Apache Tomcat 9.
+### Run Tomcat
 
-### 6. Open Browser
+Deploy the project on Apache Tomcat 9 and start the server.
+
+### Open Application
 
 ```text
-http://localhost:8080/RepoSphere/viewRepos
+http://localhost:8080/MiniGitHub/viewRepos
 ```
 
 ---
 
-## 🎯 User Workflow
+## 🔄 User Workflow
 
 ```text
 Create Repository
@@ -183,26 +217,37 @@ Download/Delete Files
 
 ---
 
+## 🎯 Key Learning Outcomes
+
+* Java Servlets
+* JSP Development
+* JDBC Integration
+* MySQL Database Operations
+* File Upload & Download Handling
+* MVC-Based Web Application Design
+* Git & GitHub Workflow
+* Bootstrap UI Development
+
+---
+
 ## 🔮 Future Enhancements
 
-- User Authentication
-- Public & Private Repositories
-- Repository Collaboration
-- File Versioning
-- Cloud Storage Integration
-- Repository Analytics Dashboard
-- Modern React Frontend
+* User Authentication & Authorization
+* Public & Private Repositories
+* Repository Search
+* Repository Descriptions
+* File Metadata Display
+* User Profiles
+* Collaboration Features
+* Repository Analytics
+* Spring Boot Migration
+* Cloud Deployment
 
 ---
+👤 Author
+---------
+The Voice Assistant Project was created by Sahil Yadav, a developer and researcher with a passion for voice-powered technology and artificial intelligence.
 
-## 👨‍💻 Author
-
-**Sahil Yadav**
-
-Project: **RepoSphere – Code Repository Platform**
-
----
-
-## 📜 License
-
-This project is developed for educational and learning purposes.
+📝 License
+----------
+The Voice Assistant Project is licensed under the [MIT License](https://opensource.org/licenses/MIT), allowing for free use, modification, and distribution of the software.
