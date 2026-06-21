@@ -40,5 +40,4 @@ public class DeleteRepoServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
 }
