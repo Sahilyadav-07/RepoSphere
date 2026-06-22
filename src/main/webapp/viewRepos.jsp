@@ -66,6 +66,8 @@ body{
 
 </head>
 
+
+
 <body>
 
 <nav class="navbar navbar-dark">
@@ -120,6 +122,13 @@ else if("deleted".equals(msg)){
 <%= (repos != null) ? repos.size() : 0 %> repositories available
 </p>
 
+<div class="mb-4">
+	<input type="text"
+		id="searchRepo"
+		class="form-control"
+		placeholder="Search Repository">
+</div>
+
 <%
 if(repos != null && repos.size() > 0){
 
@@ -132,7 +141,7 @@ for(String repo : repos){
 
 <div>
 
-<div class="repo-name">
+<div class="repo-name repo-title">
 📁 <%= repo %>
 </div>
 
@@ -203,6 +212,30 @@ Create Your First Repository
 %>
 
 </div>
+
+<script>
+document.getElementById("searchRepo").addEventListener("keyup", function() {
+
+    let search = this.value.toLowerCase();
+
+    let cards = document.querySelectorAll(".repo-card");
+
+    cards.forEach(function(card) {
+
+        let repoName = card.querySelector(".repo-title")
+                           .innerText
+                           .toLowerCase();
+
+        if (repoName.includes(search)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+});
+</script>
 
 </body>
 </html>
