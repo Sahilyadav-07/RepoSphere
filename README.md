@@ -246,7 +246,9 @@ Download/Delete Files
 ---
 👤 Author
 ---------
-The Voice Assistant Project was created by Sahil Yadav, a developer and researcher with a passion for voice-powered technology and artificial intelligence.
+👤 Author
+---------
+RepoSphere was developed by Sahil Yadav as a Java Web Development project demonstrating repository and file management using Java Servlets, JSP, JDBC, MySQL, and Apache Tomcat.
 
 📝 License
 ----------
