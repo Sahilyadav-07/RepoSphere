@@ -231,7 +231,6 @@ document.getElementById("searchRepo").addEventListener("keyup", function() {
         } else {
             card.style.display = "none";
         }
-
     });
 
 });
