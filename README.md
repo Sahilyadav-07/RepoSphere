@@ -244,8 +244,7 @@ Download/Delete Files
 * Cloud Deployment
 
 ---
-👤 Author
----------
+
 👤 Author
 ---------
 RepoSphere was developed by Sahil Yadav as a Java Web Development project demonstrating repository and file management using Java Servlets, JSP, JDBC, MySQL, and Apache Tomcat.
