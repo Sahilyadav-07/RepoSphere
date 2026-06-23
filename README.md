@@ -234,7 +234,7 @@ Download/Delete Files
 
 * User Authentication & Authorization
 * Public & Private Repositories
-* Repository Search
+* Repository Search (in building phase)
 * Repository Descriptions
 * File Metadata Display
 * User Profiles
