@@ -107,6 +107,15 @@ if("created".equals(msg)){
 
 <%
 }
+else if("updated".equals(msg)){
+%>
+
+<div class="alert alert-success">
+    Repository renamed successfully.
+</div>
+
+<%
+}
 else if("deleted".equals(msg)){
 %>
 
@@ -116,7 +125,26 @@ else if("deleted".equals(msg)){
 
 <%
 }
+else if("failed".equals(msg)){
 %>
+
+<div class="alert alert-danger">
+    Unable to rename repository.
+</div>
+
+<%
+}
+else if("error".equals(msg)){
+%>
+
+<div class="alert alert-danger">
+    Something went wrong.
+</div>
+
+<%
+}
+%>
+
 
 <p class="subtitle">
 <%= (repos != null) ? repos.size() : 0 %> repositories available
@@ -164,6 +192,21 @@ Repository
 <button class="btn btn-primary">
 Open
 </button>
+
+</form>
+
+<form action="editRepo.jsp"
+      method="get"
+      style="display:inline;">
+
+    <input type="hidden"
+           name="repoName"
+           value="<%= repo %>">
+
+    <button type="submit"
+            class="btn btn-secondary">
+        Edit
+    </button>
 
 </form>
 
