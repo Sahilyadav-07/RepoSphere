@@ -242,6 +242,7 @@ Download/Delete Files
 * Repository Analytics
 * Spring Boot Migration
 * Cloud Deployment
+* Editing Feature (Repo Name) 
 
 ---
 
